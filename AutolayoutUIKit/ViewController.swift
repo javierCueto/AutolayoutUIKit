@@ -6,6 +6,9 @@
 //
 
 import UIKit
+extension UIColor {
+    static var mainPink = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
+}
 
 class ViewController: UIViewController {
     
@@ -30,9 +33,6 @@ our stores soon.
 """, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13),NSAttributedString.Key.foregroundColor: UIColor.gray]))
         
         textView.attributedText = attributedText
-        
-        //textView.text = ""
-        //textView.font = UIFont.boldSystemFont(ofSize: 18)
         textView.textAlignment = .center
         textView.isEditable = false
         textView.isScrollEnabled = false
@@ -40,14 +40,52 @@ our stores soon.
         return textView
     }()
     
+    //
+    private let previusButton: UIButton = {
+        let buttton = UIButton(type: .system)
+        buttton.setTitle("Prev", for: .normal)
+        buttton.translatesAutoresizingMaskIntoConstraints = false
+        buttton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        buttton.setTitleColor(.gray, for: .normal)
+        return buttton
+    }()
+    
+    private let nextButton: UIButton = {
+        let buttton = UIButton(type: .system)
+        buttton.setTitle("Next", for: .normal)
+        buttton.translatesAutoresizingMaskIntoConstraints = false
+        buttton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+
+        buttton.setTitleColor(.mainPink, for: .normal)
+        return buttton
+    }()
+    
+    private let pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.currentPage = 0
+        pageControl.numberOfPages = 4
+        pageControl.currentPageIndicatorTintColor = .mainPink
+        pageControl.pageIndicatorTintColor = UIColor(red: 249/255, green: 207/255, blue: 224/255, alpha: 1)
+        return pageControl
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // view.addSubview(bearImageView)
         view.addSubview(descriptionTextView)
         
+        setupBottomControls()
         setupLaoyut()
         
+    }
+    
+    private func setupBottomControls(){
+        let bottonControlssStackView = UIStackView(arrangedSubviews: [previusButton,pageControl,nextButton])
+        bottonControlssStackView.distribution = .fillEqually
+        view.addSubview(bottonControlssStackView)
+        bottonControlssStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([bottonControlssStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor), bottonControlssStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor), bottonControlssStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor), bottonControlssStackView.heightAnchor.constraint(equalToConstant: 50)])
     }
     
     private func setupLaoyut(){
