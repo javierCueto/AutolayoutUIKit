@@ -97,10 +97,7 @@ our stores soon.
         topImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         topImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
-        /*
-        topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        topImageContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        topImageContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true*/
+
         topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor,multiplier: 0.5).isActive = true
         
         topImageContainerView.addSubview(bearImageView)
