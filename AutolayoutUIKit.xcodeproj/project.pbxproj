@@ -16,6 +16,8 @@
 		45D4BEF225740679002E9F6D /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BEF125740679002E9F6D /* SwipingController.swift */; };
 		45D4BEF525740C5A002E9F6D /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BEF425740C5A002E9F6D /* PageCell.swift */; };
 		45D4BF022575F340002E9F6D /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF012575F340002E9F6D /* Page.swift */; };
+		45D4BF0625794EDE002E9F6D /* SwipingController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF0525794EDE002E9F6D /* SwipingController+extension.swift */; };
+		45D4BF0925794FB7002E9F6D /* SwipingController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF0825794FB7002E9F6D /* SwipingController+UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		45D4BEF125740679002E9F6D /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		45D4BEF425740C5A002E9F6D /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		45D4BF012575F340002E9F6D /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		45D4BF0525794EDE002E9F6D /* SwipingController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+extension.swift"; sourceTree = "<group>"; };
+		45D4BF0825794FB7002E9F6D /* SwipingController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+UICollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				45D4BEF125740679002E9F6D /* SwipingController.swift */,
 				45D4BEF425740C5A002E9F6D /* PageCell.swift */,
 				45D4BF012575F340002E9F6D /* Page.swift */,
+				45D4BF0525794EDE002E9F6D /* SwipingController+extension.swift */,
+				45D4BF0825794FB7002E9F6D /* SwipingController+UICollectionView.swift */,
 			);
 			path = AutolayoutUIKit;
 			sourceTree = "<group>";
@@ -146,12 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45D4BF0925794FB7002E9F6D /* SwipingController+UICollectionView.swift in Sources */,
 				45D4BEE02572CA05002E9F6D /* ViewController.swift in Sources */,
 				45D4BEF525740C5A002E9F6D /* PageCell.swift in Sources */,
 				45D4BF022575F340002E9F6D /* Page.swift in Sources */,
 				45D4BEDC2572CA05002E9F6D /* AppDelegate.swift in Sources */,
 				45D4BEDE2572CA05002E9F6D /* SceneDelegate.swift in Sources */,
 				45D4BEF225740679002E9F6D /* SwipingController.swift in Sources */,
+				45D4BF0625794EDE002E9F6D /* SwipingController+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
